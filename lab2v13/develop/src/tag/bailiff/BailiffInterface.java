@@ -3,6 +3,11 @@
 
 package tag.bailiff;
 
+import java.rmi.RemoteException;
+import java.util.List;
+
+import tag.dexter.Dexter;
+
 /**
  * This interface is for the Bailiff's clients. The clients are mobile
  * code which move into the Bailiff's JVM for execution.
@@ -49,5 +54,11 @@ public interface BailiffInterface
     throws
       java.rmi.RemoteException,
       java.lang.NoSuchMethodException;
+
+
+  public List<String> Query() throws java.rmi.RemoteException;
+  public boolean HasIt() throws java.rmi.RemoteException;
+  public boolean Tag(String target) throws java.rmi.RemoteException;
+  public void Remove(String id) throws java.rmi.RemoteException;
 
 }

@@ -57,9 +57,11 @@
          destfile="${dir.dist}/${bailiffcapsname}.jar"
 	 manifest="${dir.manifest}/${bailiffcapsname}.manifest"
 	 includes="**/Bailiff$$Agitator.class
+            **/Bailiff$$BailiffStatePrinter.class
 	           **/Bailiff$$1.class
 		   **/Bailiff.class
-		   **/BailiffInterface.class">
+		   **/BailiffInterface.class
+       **/Dexter.class">
     </jar>
 
     <jar basedir="${dir.build}" compress="true"
